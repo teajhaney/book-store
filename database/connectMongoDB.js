@@ -1,10 +1,10 @@
+const env = {};
+require('dotenv').config({ processEnv: env });
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    mongoose.connect(
-      'mongodb+srv://teajhaney:yusfaith10@cluster0.vyrlzqt.mongodb.net/'
-    );
+    mongoose.connect(env.mongooseSERVER);
     console.log('mondoDB connected sucessfully');
   } catch (err) {
     console.error('Error connecting to MongoDB:', err);
