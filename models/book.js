@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema, model } = mongoose;
 
-const BookSchema = new Schema({
+const bookSchema = new Schema({
   title: {
     type: String,
     required: [true, 'Book title is required'],
@@ -24,7 +24,7 @@ const BookSchema = new Schema({
     default: Date.now,
   },
 });
-const Book = model('Book', BookSchema);
 
-model.exports = Book;
-  
+const Book = model('Book', bookSchema);
+
+module.exports = Book;

@@ -8,6 +8,9 @@ const {
 } = require('../controllers/book-controller');
 //create express router
 const router = express.Router();
+const app = express();
+
+app.use(express.json());
 
 //all route related to book
 router.get('/get', getAllBooks);
