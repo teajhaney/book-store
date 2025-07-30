@@ -3,7 +3,7 @@ const {
   getAllBooks,
   getSingBookById,
   addNewBook,
-  updateSingleBook,
+  updateSingleBookById,
   deleteBook,
 } = require('../controllers/book-controller');
 //create express router
@@ -16,7 +16,7 @@ app.use(express.json());
 router.get('/get', getAllBooks);
 router.get('/get/:id', getSingBookById);
 router.post('/add', addNewBook);
-router.put('/update/:id', updateSingleBook);
+router.put('/update/:id', updateSingleBookById);
 router.delete('/delete/:id', deleteBook);
 
 module.exports = router;
